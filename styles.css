@@ -1,0 +1,80 @@
+
+.background{
+    background-color: rgba(217, 239, 245, 0.5);
+    padding-bottom: 200px;
+}
+
+.title1{
+    display: block;
+    font-size: 54px;
+    color: black;
+    padding: 35px ;
+}
+.container{
+display: flex;
+flex-direction: row;
+margin: 0 40px ;
+gap: 15px;
+
+}
+
+.books-container{
+    width: calc(100% / 4);
+}
+
+.limiter-container{
+    background-color: white;
+    border-radius: 10px;    
+}
+
+.limiter{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+}
+
+.imge{
+    width: 200px;
+    height: 200px;
+}
+
+.title{
+margin-top: 30px;
+text-align: center;
+}
+
+.year{
+margin-top: 10px; 
+text-align: center;
+}
+
+.authors{
+padding: 5px;
+margin-top: 10px;
+border-radius: 12px;
+background-color: rgb(236, 247, 247);
+color: rgb(96, 133, 133);
+font-size: 20px;
+text-align: center;
+}
+
+.button-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid grey;
+}
+
+.button{
+    box-sizing: border-box;
+    border: 0 solid;
+    text-decoration: none;
+    color:black;
+    padding: 20px 30px;
+    background-color: white;
+    border-color: rgb(212, 210, 210);
+
+}
