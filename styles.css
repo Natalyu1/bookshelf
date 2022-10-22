@@ -1,12 +1,26 @@
 
 .background{
+    position: relative;
     background-color: rgba(217, 239, 245, 0.5);
-    padding-bottom: 200px;
+}
+
+.container_button{
+    position: fixed;
+    inset: 0px;
+    background-color: rgba(0, 0, 0, 0.35);
+    display: none;
 }
 
 .limiter-1{
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
     padding: 25px 45px;
+    border-radius: 10px;
 }
+
 .addBook{
     margin-top: 10px;
     font-size: 24px;

@@ -36,29 +36,30 @@ const books = [
     const container = document.getElementById("myContainer")
 
     function renderbooks() {
-    books.forEach((book) => {
-    container.innerHTML += `
-       <div class = "books-container"> 
-       <div class = "limiter-container">
-       <div class = "limiter">
-       <img alt="" class="imge" src="${book.image}">
-       <h2 class = "title">${book.title}</h2>
-       <p class = "year">${book.year}</p>
-       <p class = "authors">${book.authors}</p>
-       </div>
+      container.innerHTML = ""
+      books.forEach((book) => {
+      container.innerHTML += `
+         <div class = "books-container"> 
+         <div class = "limiter-container">
+         <div class = "limiter">
+         <img alt="" class="imge" src="${book.image}">
+         <h2 class = "title">${book.title}</h2>
+         <p class = "year">${book.year}</p>
+         <p class = "authors">${book.authors}</p>
+         </div>
 
-       <div class = "button-container">
-       <div >
-       <button class = "button">Изменить</button>
-       </div>
-       <div>
-       <button onclick='deleteBook(${book.id})' class = "button">Удалить</button>
-       </div>
-       </div>
-       </div>
-       
-    `
-  }
+         <div class = "button-container">
+         <div >
+         <button class = "button">Изменить</button>
+         </div>
+         <div>
+         <button onclick='deleteBook(${book.id})' class = "button">Удалить</button>
+         </div>
+         </div>
+         </div>
+         
+      `
+    }
   )
 }
 
@@ -103,3 +104,17 @@ function resetForm(){
    renderbooks()
   
   }
+
+  let isOpen = false
+function openMenu() {
+    const openButoon = document.getElementById("container-button")
+    if (isOpen){
+      openButoon.style.display = "none"
+      isOpen = false
+    } else {
+        openButoon.style.display = "flex"
+        isOpen = true
+    }
+
+
+}

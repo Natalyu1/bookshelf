@@ -11,57 +11,60 @@
 
     <body>
         <div class="background">
-             <div class="limiter-1">
-                <form>
-                <p class="addBook">Добавить новую книгу</p>
-
+            <div id="container-button" class="container_button">
+                <div class="limiter-1">
+                    <form>
+                    <p class="addBook">Добавить новую книгу</p>
+    
+                    <div class="input">
+                 <label for="element"></label>
+                 <input id="addTitle" class="element" />
+                </div>
+          
+    
+            
+            <p class="addBook">Автор/Авторы</p>
+            
                 <div class="input">
              <label for="element"></label>
-             <input id="addTitle" class="element" />
+             <input id="author" class="element" />
             </div>
-      
-
         
-        <p class="addBook">Автор/Авторы</p>
-        
+    
+     <div class="row">
+    <div class="separator">
+        <p class="addBook">Год издания</p>
+       
             <div class="input">
          <label for="element"></label>
-         <input id="author" class="element" />
+         <input id="year" class="element" />
         </div>
     
-
- <div class="row">
-<div class="separator">
-    <p class="addBook">Год издания</p>
-   
+    </div>
+    
+    <div class="separator">
+    <p class="addBook">Cсылка на изображение</p>
+    
         <div class="input">
      <label for="element"></label>
-     <input id="year" class="element" />
+     <input id="link" class="element" />
     </div>
-
-</div>
-
-<div class="separator">
-<p class="addBook">Cсылка на изображение</p>
-
-    <div class="input">
- <label for="element"></label>
- <input id="link" class="element" />
-</div>
-
- </div>
- </div>
- <div class="button-2">
-    <button onclick="addBooks()" class="blue-button">Добавить в список</button>
-</div>
-</div> 
-</form>  
+    
+     </div>
+     </div>
+     <div class="button-2">
+        <button onclick="addBooks()" class="blue-button">Добавить в список</button>
+    </div>
+    </div> 
+    </form>  
+     </div>
+             
   
 
             <div class="row-container">
         <h1 class="title1">Книжная полка</h1>
         <div>
-            <button id="myButton" class="button-1">Добавить кнопку</button>
+            <button onclick="openMenu()" id="container-button" class="button-1">Добавить кнопку</button>
         </div>
     </div>
     <div id="myContainer" class="container">
