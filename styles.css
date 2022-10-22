@@ -4,12 +4,85 @@
     padding-bottom: 200px;
 }
 
+.limiter-1{
+    padding: 25px 45px;
+}
+.addBook{
+    margin-top: 10px;
+    font-size: 24px;
+    color: black;
+    padding: 10px 0;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+}
+
+.separator{
+    margin-right: 15px;
+}
+
+.input-1{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    width: calc(100% / 2 - 20px);
+    color: #404040;
+}
+
+
+.button-2{
+    display: flex;
+    justify-content: left;
+    border: none;
+}
+
+.blue-button{
+  background-color: rgb(74, 150, 150);
+  font-size: 21px;
+  border-radius: 5px;
+  padding: 10px 185px;
+  border: none;
+  margin-top: 12px;
+}
+
+
+.element{
+   border-radius: 5px; 
+   border: 1px solid grey;
+   padding: 10px 30px;
+   margin-top: 10px;
+}
+
+
+
+.row-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
 .title1{
     display: block;
     font-size: 54px;
     color: black;
     padding: 35px ;
 }
+
+
+.button-1{
+    background-color: rgb(74, 150, 150);
+    color: white;
+    font-size: 18px;
+    padding: 20px 35px;
+    margin-right: 20px;
+    border-radius: 10px;
+    
+}
+
 .container{
 display: flex;
 flex-direction: row;
@@ -44,6 +117,7 @@ gap: 15px;
 margin-top: 30px;
 text-align: center;
 }
+
 
 .year{
 margin-top: 10px; 
