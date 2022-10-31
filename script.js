@@ -35,6 +35,7 @@ const books = [
 
     const container = document.getElementById("myContainer")
 
+
     function renderbooks() {
       container.innerHTML = ""
       books.forEach((book) => {
@@ -105,16 +106,21 @@ function resetForm(){
   
   }
 
-  let isOpen = false
-function openMenu() {
-    const openButoon = document.getElementById("container-button")
-    if (isOpen){
-      openButoon.style.display = "none"
-      isOpen = false
-    } else {
-        openButoon.style.display = "flex"
-        isOpen = true
+  
+  const openButoon = document.getElementById("container-button")
+  const closeModalButton = document.getElementById("close-button")
+  const openModalButton = document.getElementById("openContainer-button")
+
+    function openModal () {
+      openButoon.style.display = 'none'
     }
 
+    function closeModal () {
+      openButoon.style.display = 'flex'
+    }
+    
+    closeModalButton.addEventListener ('click', closeModal)
+    openButoon.addEventListener ('click', openModal)
 
-}
+    
+   console.log(openModal)
