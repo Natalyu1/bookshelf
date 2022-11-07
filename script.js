@@ -45,8 +45,10 @@ const books = [
          <div class = "limiter">
          <img alt="" class="imge" src="${book.image}">
          <h2 class = "title">${book.title}</h2>
+         <div class = "column">
          <p class = "year">${book.year}</p>
          <p class = "authors">${book.authors}</p>
+         </div>
          </div>
 
          <div class = "button-container">
@@ -112,15 +114,14 @@ function resetForm(){
   const openModalButton = document.getElementById("openContainer-button")
 
     function openModal () {
-      openButoon.style.display = 'none'
+      openButoon.style.display = 'flex'
     }
 
     function closeModal () {
-      openButoon.style.display = 'flex'
+      openButoon.style.display = 'none'
     }
     
     closeModalButton.addEventListener ('click', closeModal)
-    openButoon.addEventListener ('click', openModal)
+    openModalButton.addEventListener ('click', openModal)
 
     
-   console.log(openModal)

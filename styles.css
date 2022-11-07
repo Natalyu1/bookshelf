@@ -1,7 +1,7 @@
 
 .background{
     position: relative;
-    background-color: rgba(217, 239, 245, 0.5);
+    background-color:rgb(143 188 201 / 50%);
 }
 
 .container_button{
@@ -102,17 +102,23 @@
 display: flex;
 flex-direction: row;
 margin: 0 40px ;
+justify-content: center;
 gap: 15px;
 
 }
 
 .books-container{
     width: calc(100% / 4);
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box; 
+    margin: 15px;
+    padding: 15px;
 }
 
 .limiter-container{
     background-color: white;
-    border-radius: 10px;    
+    border-radius: 10px;   
 }
 
 .limiter{
@@ -133,6 +139,12 @@ margin-top: 30px;
 text-align: center;
 }
 
+.column{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px;
+}
 
 .year{
 margin-top: 10px; 
