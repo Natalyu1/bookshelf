@@ -53,7 +53,7 @@ const books = [
 
          <div class = "button-container">
          <div >
-         <button onclick='openContainerBook(${book.id})' class = "button">Изменить</button>
+         <button onclick='openUpdateModal(${book.id})' class = "button">Обновить</button>
          </div>
          <div>
          <button onclick='deleteBook(${book.id})' class = "button">Удалить</button>
@@ -69,13 +69,25 @@ const books = [
 
 
 const updateModalBook = document.getElementById("updateModal")
+
+const closeUpdateModalBook = document.getElementById("updateСancel")
+closeUpdateModalBook.addEventListener("click", closeUpdateMenu)
+
+function closeUpdateMenu(){
+  updateModalBook.style.display = "none"
+}
+
 function openUpdateModal(){
   updateModalBook.style.display = "flex"
-}
-books.forEach((book) => {
-  document.getElementById("'openContainerBook(${book.id})").addEventListener("click", updateModalBook)
+  const currentBook = books.find(b => b.id === id)
   
-  })
+  document.getElementById("updateAddTitle").value = currentBook.title
+  document.getElementById("updateAuthor").value = currentBook.authors
+  document.getElementById("updateYear").value = currentBook.year
+  document.getElementById("updateLink").value = currentBook.image
+
+
+}
 
 
 function resetForm(){
