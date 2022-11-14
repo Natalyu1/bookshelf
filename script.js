@@ -53,7 +53,7 @@ const books = [
 
          <div class = "button-container">
          <div >
-         <button class = "button">Изменить</button>
+         <button onclick='openContainerBook(${book.id})' class = "button">Изменить</button>
          </div>
          <div>
          <button onclick='deleteBook(${book.id})' class = "button">Удалить</button>
@@ -64,7 +64,19 @@ const books = [
       `
     }
   )
+
 }
+
+
+const updateModalBook = document.getElementById("updateModal")
+function openUpdateModal(){
+  updateModalBook.style.display = "flex"
+}
+books.forEach((book) => {
+  document.getElementById("'openContainerBook(${book.id})").addEventListener("click", updateModalBook)
+  
+  })
+
 
 function resetForm(){
   document.getElementById("addTitle").value = ""
@@ -103,9 +115,10 @@ function resetForm(){
 
    const bookIndex = books.indexOf(Book)
 
+   
    books.splice(bookIndex, 1)
    renderbooks()
-  
+   saveToLocalStorage();
   }
 
   
@@ -125,3 +138,4 @@ function resetForm(){
     openModalButton.addEventListener ('click', openModal)
 
     
+   

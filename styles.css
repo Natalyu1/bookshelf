@@ -28,29 +28,14 @@
     padding: 10px 0;
 }
 
-.row{
-    display: flex;
-    flex-direction: row;
-}
-
-.separator{
-    margin-right: 15px;
-}
-
-.input-1{
-    display: flex;
-    flex-direction: column;
-    margin: 10px;
-    width: calc(100% / 2 - 20px);
-    color: #404040;
-}
-
-
 .button-2{
     display: flex;
+    flex-direction: column;
     justify-content: left;
     border: none;
 }
+
+
 
 .blue-button{
   background-color: rgb(74, 150, 150);
@@ -59,7 +44,6 @@
   padding: 10px 185px;
   border: none;
   margin-top: 12px;
-  display: flex;
 }
 
 
@@ -77,6 +61,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    
     
 }
 
@@ -99,12 +84,12 @@
 }
 
 .container{
-display: flex;
-flex-direction: row;
-margin: 0 40px ;
-justify-content: center;
-gap: 15px;
-
+    display: flex;
+    flex-direction: row;
+    margin: 0 40px ;
+    justify-content: center;
+    gap: 15px;
+    
 }
 
 .books-container{
@@ -117,7 +102,7 @@ gap: 15px;
 }
 
 .limiter-container{
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     border-radius: 10px;   
 }
 
@@ -175,7 +160,7 @@ text-align: center;
     text-decoration: none;
     color:black;
     padding: 20px 30px;
-    background-color: white;
+    background-color: rgb(233, 225, 225);
     border-color: rgb(212, 210, 210);
 
 }

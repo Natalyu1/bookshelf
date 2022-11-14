@@ -11,53 +11,40 @@
 
     <body>
         <div class="background">
+
             <div id="container-button" class="container_button">
-                <div class="limiter-1">
-                    <p class="addBook">Добавить новую книгу</p>
-    
-                    <div class="input">
-                 <label for="element"></label>
-                 <input id="addTitle" class="element" />
-                </div>
-          
-    
-            
-            <p class="addBook">Автор/Авторы</p>
-            
-                <div class="input">
-             <label for="element"></label>
-             <input id="author" class="element" />
-            </div>
-        
-    
-     <div class="row">
-    <div class="separator">
-        <p class="addBook">Год издания</p>
-       
-            <div class="input">
-         <label for="element"></label>
-         <input id="year" class="element" />
+                 
+               <div class="limiter-1">
+                <p class="addBook">Добавить новую книгу</p>
+                <input id="addTitle" class="element" placeholder="Название книги">
+                <input id="author" class="element" placeholder="Автор/Авторы">
+                <input id="year" class="element" placeholder="Год издания">
+                <input id="link" class="element" placeholder="Cсылка на изображение">
+         
+                <div class="button-2">
+        <button onclick = "addBooks()" id="close-button" class="blue-button">Добавить в список</button>
+        <button onclick = "addBooks()" id="close-button" class="blue-button">Отменить</button>
+    </div>
+</div>
         </div>
     
-    </div>
-    
-    <div class="separator">
-    <p class="addBook">Cсылка на изображение</p>
-    
-        <div class="input">
-     <label for="element"></label>
-     <input id="link" class="element" />
-    </div>
-    
-     </div>
-     </div>
-     <div class="button-2">
-        <button onclick = "addBooks()" id="close-button" class="blue-button">Добавить в список</button>
-    </div>
-    </div> 
-
-     </div>
              
+        <div id="updateModal" class="container_button">
+                 
+            <div class="limiter-1">
+             <p class="addBook">Обновить книгу</p>
+             <input id="updateAddTitle" class="element" placeholder="Название книги">
+             <input id="updateAuthor" class="element" placeholder="Автор/Авторы">
+             <input id="updateYear" class="element" placeholder="Год издания">
+             <input id="updateLink" class="element" placeholder="Cсылка на изображение">
+      
+             <div class="button-2">
+     <button onclick = "addBooks()" id="updateButton" class="blue-button">Добавить в список</button>
+     <button onclick = "addBooks()" id="updateСancel" class="blue-button">Отменить</button>
+ </div>
+</div>
+     </div>
+ 
   
 
             <div class="row-container">
