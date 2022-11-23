@@ -69,15 +69,19 @@ const books = [
 
 
 const updateModalBook = document.getElementById("updateModal")
-
 const closeUpdateModalBook = document.getElementById("updateСancel")
+
 closeUpdateModalBook.addEventListener("click", closeUpdateMenu)
 
 function closeUpdateMenu(){
   updateModalBook.style.display = "none"
 }
+//
 
-function openUpdateModal(){
+const ModalUpdateButton = document.getElementById("updateButton")
+
+
+function openUpdateModal(id){
   updateModalBook.style.display = "flex"
   const currentBook = books.find(b => b.id === id)
   
@@ -86,11 +90,48 @@ function openUpdateModal(){
   document.getElementById("updateYear").value = currentBook.year
   document.getElementById("updateLink").value = currentBook.image
 
+const makeUpdate = () => statusUpdateBook(id, makeUpdate)
+
+  ModalUpdateButton.addEventListener("click", makeUpdate)
+
+}
+
+function statusUpdateBook(id, makeUpdate){
+
+  ModalUpdateButton.removeEventListener("click", makeUpdate)
+
+  const oldBook = books.find(b => b.id === id)
+  const nameBook = document.getElementById("updateAddTitle").value
+  const authorBook = document.getElementById("updateAuthor").value
+  const yearBook = document.getElementById("updateYear").value
+  const linkBook = document.getElementById("updateLink").value
+
+  const freshBook = {
+    id,
+    title: nameBook,
+    authors: authorBook,
+    year: yearBook,
+    image: linkBook
+  }
+
+ 
+  const bookIndex = books.indexOf(id)
+books.splice(bookIndex, 1, freshBook)
+
+renderbooks() //
+
+closeUpdateMenu()
+
 
 }
 
 
-function resetForm(){
+const booksJson = JSON.stringify(books)
+localStorage.setItem("books", booksJson)
+
+
+
+function resetForm(){  //очищаем поля
   document.getElementById("addTitle").value = ""
   document.getElementById("author").value = ""
   document.getElementById("year").value = ""
@@ -98,7 +139,7 @@ function resetForm(){
 }
   
 
-  function addBooks() {
+  function addBooks() { //функция для добавления книги
     const nameBook = document.getElementById("addTitle").value
     const authorBook = document.getElementById("author").value
     const yearBook = document.getElementById("year").value
@@ -108,12 +149,12 @@ function resetForm(){
       title: nameBook,
       authors: authorBook,
       year: yearBook,
-      link: linkBook
+      image: linkBook
     }
 
     books.push(newBook)
     renderbooks()
-    resetForm()
+    resetForm() 
  
   }
 
@@ -130,7 +171,7 @@ function resetForm(){
    
    books.splice(bookIndex, 1)
    renderbooks()
-   saveToLocalStorage();
+   
   }
 
   
