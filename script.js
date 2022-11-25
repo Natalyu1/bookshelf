@@ -1,4 +1,4 @@
-const books = [
+let books = [
     {
       id: 1,
       title: 'Design Patterns: Elements of Reusable Object-Oriented Software',
@@ -115,19 +115,20 @@ function statusUpdateBook(id, makeUpdate){
   }
 
  
-  const bookIndex = books.indexOf(id)
+  const bookIndex = books.indexOf(oldBook)
 books.splice(bookIndex, 1, freshBook)
 
-renderbooks() //
-
+renderbooks() 
 closeUpdateMenu()
-
+saveToLocalStorage()
 
 }
 
 
-const booksJson = JSON.stringify(books)
-localStorage.setItem("books", booksJson)
+function saveToLocalStorage(){
+  const booksJson = JSON.stringify(books)
+  localStorage.setItem("books", booksJson)
+}
 
 
 
@@ -155,10 +156,10 @@ function resetForm(){  //очищаем поля
     books.push(newBook)
     renderbooks()
     resetForm() 
- 
+    saveToLocalStorage()
   }
 
-   renderbooks()
+  
 
    function deleteBook(id) {
     const deleteBooks = document.getElementById(id)
@@ -171,7 +172,7 @@ function resetForm(){  //очищаем поля
    
    books.splice(bookIndex, 1)
    renderbooks()
-   
+   saveToLocalStorage()
   }
 
   
@@ -190,5 +191,15 @@ function resetForm(){  //очищаем поля
     closeModalButton.addEventListener ('click', closeModal)
     openModalButton.addEventListener ('click', openModal)
 
+
+    const booksJson = localStorage.getItem("books")
+    const savedBooks = JSON.parse(booksJson)
+
+if (savedBooks && savedBooks.length > 0){
+  currentBooks = savedBooks
+} 
+
+
+    renderbooks()
     
    

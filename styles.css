@@ -62,16 +62,27 @@
     justify-content: space-between;
     align-items: center;
     
-    
 }
 
+@media (max-width: 768px){
+    .row-container{
+       flex-direction: column;
+       justify-content: center;
+    }
+
+
 .title1{
-    display: block;
+   
     font-size: 54px;
     color: black;
     padding: 35px ;
 }
 
+@media (max-width: 768px){
+    .title1{
+       font-size: 44px;
+       text-align: center;
+    }
 
 .button-1{
     background-color: rgb(74, 150, 150);
@@ -86,10 +97,9 @@
 .container{
     display: flex;
     flex-direction: row;
-    margin: 0 40px ;
     justify-content: center;
     gap: 15px;
-    
+    flex-wrap: wrap;
 }
 
 .books-container{
@@ -101,7 +111,17 @@
     padding: 15px;
 }
 
+@media (max-width: 768px){
+    .books-container{
+       width: calc(100% / 1);
+    }
+
+
 .limiter-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     background-color: rgb(255, 255, 255);
     border-radius: 10px;   
 }
@@ -115,8 +135,8 @@
 }
 
 .imge{
-    width: 200px;
-    height: 200px;
+    width: 70%;
+    height: 70%;
 }
 
 .title{
@@ -160,7 +180,6 @@ text-align: center;
     text-decoration: none;
     color:black;
     padding: 20px 30px;
-    background-color: rgb(233, 225, 225);
-    border-color: rgb(212, 210, 210);
+   background-color: white;
 
 }
